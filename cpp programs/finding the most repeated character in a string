@@ -1,0 +1,21 @@
+#include<stdio.h>
+#include<iostream>
+#include<string.h>
+using namespace std;
+int main(){
+    string s;
+    cin>>s;int count=-1;
+    int hash[123]={0};
+    char ch;
+    for(int i=0;i<s.length();i++){
+        hash[s[i]]++;
+    }
+    for(int j=0;j<s.length();j++){
+        if(count<hash[s[i]]){
+              count=hash[s[i]];
+              ch=s[i][      
+        }
+    }
+    cout<<ch;
+}    
+
