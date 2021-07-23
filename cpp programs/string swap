@@ -1,0 +1,15 @@
+#include<stdio.h>
+#include<iostream>
+#include<string.h>
+using namespace std;
+int main(){
+    char s[100],s1[100],temp[100];
+  cin>>s;
+  cin>>s1;
+    strcpy(temp,s);
+    strcpy(s,s1);
+    strcpy(s1,temp);
+    cout<<s<<s1;
+    
+    
+}
