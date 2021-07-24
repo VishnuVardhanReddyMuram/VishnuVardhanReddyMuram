@@ -1,0 +1,55 @@
+#include <iostream>
+#include <string>
+#include<bits/stdc++.h>
+using namespace std;
+//90 clock wise rotation:
+int main()
+{  
+    int n;
+    cin>>n;
+   
+     int a[n][n];
+    for(int i=0;i<n;i++){
+        for(int j=0;j<n;j++){
+            cin>>a[i][j];
+        }
+    }
+     //transpose of matrix;
+     for(int i=0;i<n;i++){
+        for(int j=i;j<n;j++){
+            swap(a[i][j],a[j][i]);
+        }
+       
+    }
+   cout<<"transposed matrix"<<endl;
+     for(int i=0;i<n;i++){
+        for(int j=0;j<n;j++){
+            cout<<a[i][j]<<" ";
+        }
+        cout<<endl;
+    }
+    for(int i=0;i<n;i++){
+        int e=0;
+        int j=n-1;
+        while(e<=j){
+            swap(a[i][e],a[i][j]);
+            e++;
+            j--;
+        }
+        cout<<"clockwise90"<<endl;
+      for(int i=0;i<n;i++){
+         for(int j=0;j<n;j++){
+            cout<<a[i][j]<<" ";
+        }
+        cout<<endl;
+    }
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+}
