@@ -1,0 +1,27 @@
+#include<stdio.h>
+#include<iostream>
+#include<string.h>
+using namespace std;
+char secondmost(string s){
+    int hash[123]={0};
+    for(int i=0;i<s.length();i++){
+        hash[s[i]]++;
+    }
+    int first=0,second=0;
+    for(int i=0;i<123;i++){
+        if(hash[first]<hash[i]){
+            second=first;
+            first=i;
+        }
+        else if(hash[second]<hash[i] && hash[i]!=hash[first]){
+            second=i;
+        }
+    }
+    return second;
+}
+int main(){
+    string s;
+    cin>>s;
+    char c=secondmost(s);
+    cout<<c;
+}    
