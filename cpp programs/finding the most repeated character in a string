@@ -11,9 +11,9 @@ int main(){
         hash[s[i]]++;
     }
     for(int j=0;j<s.length();j++){
-        if(count<hash[s[i]]){
-              count=hash[s[i]];
-              ch=s[i][      
+        if(count<hash[s[j]]){
+              count=hash[s[j]];
+              ch=s[j]      
         }
     }
     cout<<ch;
