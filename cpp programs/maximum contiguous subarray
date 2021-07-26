@@ -1,0 +1,23 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+int maximumsub(int *s, int n){
+    int maximsofar=0,maxend=0;
+    for(int i=0;i<n;i++){
+        maxend=maxend+s[i];
+        if(maximsofar<maxend){
+            maximsofar=maxend;
+        }
+        if(maxend<0){
+            maxend=0;
+        }
+        
+    }
+    return maximsofar;
+}
+int main() {
+   int n=5;
+    int arr[5]={2,3,4,-5,13};
+    int max= maximumsub(arr,n);
+    cout<<max;
+}
