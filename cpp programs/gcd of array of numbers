@@ -1,0 +1,27 @@
+// Online C++ compiler to run C++ program online
+#include<iostream>
+using namespace std;
+int gcd(int n1,int n2){
+     n1=(n1>0)?n1:-n1;
+   n2=(n2>0)?n2:-n2;
+  while(n1!=n2){
+      if(n1>n2){
+          n1-=n2;
+      }
+      else {
+          n2-=n1;
+      }
+      
+  }
+ return n1;
+}
+int main() {
+   
+    int arr[6]={36,18,9,9,18,36};
+    int g=gcd(arr[0],arr[1]);
+    for(int i=2;i<6;i++){
+         g=gcd(g,arr[i]);
+    }
+  cout<<g;
+    return 0;
+}
